@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>كورة لايف - بث مباشر للمباريات | مشاهدة مباريات كرة القدم اونلاين - Koora Live</title>
+    <meta name="description" content="كورة لايف - موقع لمشاهدة مباريات كرة القدم مباشرة اونلاين. جدول المباريات، بث حي، وأخبار كرة القدم. شاهد أهم المباريات العالمية والمحلية مجانًا.">
+    <meta name="keywords" content="كورة لايف, بث مباشر, مباريات اليوم, كرة القدم, مشاهدة مباريات, يلا شوت, كورة اون لاين, مباريات الدوري, نتائج المباريات, جدول المباريات, اهداف المباريات, كورة ستار, كووورة, ملخص المباريات, بي ان سبورت مباشر, الدوري الإنجليزي, الدوري الإسباني, دوري أبطال أوروبا, كأس العالم">
+    <link rel="canonical" href="http://koora.free.nf/">
+    <meta name="robots" content="index, follow">
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="كورة لايف - بث مباشر للمباريات">
+    <meta property="og:description" content="شاهد مباريات كرة القدم مباشرة على كورة لايف. جدول المباريات وبث حي لأهم الأحداث الرياضية.">
+    <meta property="og:url" content="http://koora.free.nf/">
+    <meta property="og:type" content="website">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0S2HLBSQV2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0S2HLBSQV2');
+</script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dark-green': '#0d4a2c',
+                        'light-green': '#2ecc71',
+                        'accent-yellow': '#ffd700',
+                    },
+                    fontFamily: {
+                        'tajawal': ['Tajawal', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap');
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-image: url('https://example.com/soccer-background.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        .animate-pulse {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: .5;
+            }
+        }
+        .loader {
+            width: 50px;
+            height: 50px;
+            border: 5px solid #2ecc71;
+            border-bottom-color: transparent;
+            border-radius: 50%;
+            display: inline-block;
+            box-sizing: border-box;
+            animation: rotation 1s linear infinite;
+        }
+
+        @keyframes rotation {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-gray-900 to-black text-white font-tajawal">
+    <header class="bg-dark-green shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-4xl font-bold text-accent-yellow">كورة لايف</h1>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="index.html" class="hover:text-accent-yellow transition duration-300"><i class="fas fa-home ml-1"></i>الرئيسية</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <div id="loading" class="flex flex-col justify-center items-center h-64">
+            <div class="loader mb-4"></div>
+            <h2 class="text-center text-xl font-semibold">جاري تحميل المباريات...</h2>
+        </div>
+        <section id="featured-match" class="bg-gradient-to-r from-dark-green to-gray-800 rounded-lg shadow-2xl overflow-hidden mb-12 transform hover:scale-105 transition duration-300 hidden">
+            <!-- سيتم تحديث هذا القسم ديناميكيًا -->
+        </section>
+
+        <section id="upcoming-matches" class="hidden">
+            <h2 class="text-3xl font-semibold mb-8 text-accent-yellow">المباريات القادمة</h2>
+            <div id="matchList" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- سيتم تحديث هذا القسم ديناميكيًا -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark-green mt-12 py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2024 كورة لايف - جميع الحقوق محفوظة</p>
+            <div class="mt-4 flex justify-center space-x-4">
+                <a href="#" class="text-white hover:text-accent-yellow transition duration-300"><i class="fab fa-facebook fa-2x"></i></a>
+                <a href="#" class="text-white hover:text-accent-yellow transition duration-300"><i class="fab fa-twitter fa-2x"></i></a>
+                <a href="#" class="text-white hover:text-accent-yellow transition duration-300"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="#" class="text-white hover:text-accent-yellow transition duration-300"><i class="fab fa-youtube fa-2x"></i></a>
+            </div>
+            <nav class="mt-4">
+                <ul class="flex justify-center space-x-4">
+                    <li><a href="/about.html" class="text-white hover:text-accent-yellow">عن الموقع</a></li>
+                    <li><a href="/contact.html" class="text-white hover:text-accent-yellow">اتصل بنا</a></li>
+                    <li><a href="/privacy-policy.html" class="text-white hover:text-accent-yellow">سياسة الخصوصية</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <script>
+        const apiUrl = 'http://localhost:8000/matches';
+
+        const fallbackMatches = [
+            {
+                title: "برشلونة vs ريال مدريد",
+                team1: "برشلونة",
+                team2: "ريال مدريد",
+                team1_logo: "https://via.placeholder.com/100",
+                team2_logo: "https://via.placeholder.com/100",
+                start_time: "2024-10-01T20:00:00+03:00",
+                end_time: "2024-10-01T22:00:00+03:00",
+                commentator: "عصام الشوالي",
+                channel: "بي إن سبورت 1",
+                tournament: "الدوري الإسباني",
+                watch_Id: "/"
+            },
+            // ... يمكنك إضافة المزيد من المباريات الوهمية هنا
+        ];
+
+        async function fetchMatches() {
+            try {
+                const response = await fetch(apiUrl, {
+                    headers: {
+                        'ngrok-skip-browser-warning': 'true'
+                    }
+                });
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const contentType = response.headers.get("content-type");
+                console.log("Content-Type:", contentType);
+                if (!contentType || !contentType.includes("application/json")) {
+                    console.log("Response text:", await response.text());
+                    throw new Error("Oops, we haven't got JSON!");
+                }
+                const data = await response.json();
+                console.log("Fetched data:", data);
+                return data.matches || [];
+            } catch (error) {
+                console.error('Error fetching matches:', error);
+                console.log('Using fallback matches');
+                return fallbackMatches;
+            }
+        }
+
+        function formatDate(dateString) {
+            const options = { year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric' };
+            return new Date(dateString).toLocaleDateString('ar-EG', options);
+        }
+
+        function updateFeaturedMatch(match) {
+            const featuredMatchSection = document.getElementById('featured-match');
+            const isLive = match.watch_Id && match.watch_Id !== "/" && match.watch_Id !== "#";
+            const statusClass = isLive ? "bg-red-600" : "bg-yellow-600";
+            const statusText = isLive ? "مباشر" : "لم تبدأ بعد";
+            
+            featuredMatchSection.innerHTML = `
+                <div class="bg-dark-green py-4 px-6 flex justify-between items-center">
+                    <h2 class="text-2xl font-semibold text-accent-yellow">المباراة المميزة</h2>
+                    <span class="animate-pulse ${statusClass} text-white px-2 py-1 rounded-full text-sm">${statusText}</span>
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-center">
+                        <div class="text-center">
+                            <img src="${match.team1_logo}" alt="${match.team1}" class="w-24 h-24 mx-auto mb-4 rounded-full border-4 border-light-green">
+                            <p class="text-2xl font-bold">${match.team1}</p>
+                        </div>
+                        <div class="text-5xl font-bold text-light-green">VS</div>
+                        <div class="text-center">
+                            <img src="${match.team2_logo}" alt="${match.team2}" class="w-24 h-24 mx-auto mb-4 rounded-full border-4 border-light-green">
+                            <p class="text-2xl font-bold">${match.team2}</p>
+                        </div>
+                    </div>
+                    <div class="text-center mt-8">
+                        <p class="text-xl mb-2"><i class="far fa-clock ml-2"></i>${formatDate(match.start_time)}</p>
+                        <p class="text-lg mb-2">${match.channel}</p>
+                        <p class="text-md mb-4">${match.tournament}</p>
+                        <button id="watchButton" class="bg-accent-yellow hover:bg-yellow-400 text-gray-900 font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-110 ${isLive ? '' : 'opacity-50 cursor-not-allowed'}">
+                            <i class="fas fa-play ml-2"></i>${isLive ? 'شاهد البث المباشر' : 'المباراة لم تبدأ بعد'}
+                        </button>
+                    </div>
+                </div>
+            `;
+
+            const watchButton = document.getElementById('watchButton');
+            watchButton.addEventListener('click', () => {
+                if (isLive) {
+                    window.location.href = `watche.html?id=${encodeURIComponent(match.watch_Id)}&stream=${encodeURIComponent(match.stream_url)}`;
+                } else {
+                    alert('المباراة لم تبدأ بعد. يرجى الانتظار حتى موعد المباراة.');
+                }
+            });
+        }
+
+        function updateUpcomingMatches(matches) {
+            const matchList = document.getElementById('matchList');
+            matchList.innerHTML = '';
+            matches.forEach(match => {
+                const isLive = match.watch_Id && match.watch_Id !== "/" && match.watch_Id !== "#";
+                const statusClass = isLive ? "bg-red-600" : "bg-yellow-600";
+                const statusText = isLive ? "مباشر" : "لم تبدأ بعد";
+                
+                const div = document.createElement('div');
+                div.className = 'bg-gradient-to-br from-dark-green to-gray-800 rounded-lg shadow-xl p-6 transform hover:scale-105 transition duration-300 cursor-pointer';
+                div.innerHTML = `
+                    <div class="flex justify-between items-center mb-4">
+                        <div class="text-center">
+                            <img src="${match.team1_logo}" alt="${match.team1}" class="w-16 h-16 mx-auto mb-2 rounded-full">
+                            <span class="font-bold text-sm">${match.team1}</span>
+                        </div>
+                        <span class="text-light-green font-bold text-2xl">VS</span>
+                        <div class="text-center">
+                            <img src="${match.team2_logo}" alt="${match.team2}" class="w-16 h-16 mx-auto mb-2 rounded-full">
+                            <span class="font-bold text-sm">${match.team2}</span>
+                        </div>
+                    </div>
+                    <div class="text-center mt-4">
+                        <span class="inline-block ${statusClass} text-white px-2 py-1 rounded-full text-sm mb-2">${statusText}</span>
+                        <p class="text-sm text-gray-300 mb-2"><i class="far fa-calendar-alt ml-2"></i>${formatDate(match.start_time)}</p>
+                        <p class="text-sm text-accent-yellow mb-2"><i class="fas fa-trophy ml-2"></i>${match.tournament}</p>
+                        <p class="text-sm text-gray-300"><i class="fas fa-tv ml-2"></i>${match.channel}</p>
+                    </div>
+                `;
+                div.addEventListener('click', () => {
+                    if (isLive) {
+                        window.location.href = `watche.html?id=${encodeURIComponent(match.watch_Id)}&stream=${encodeURIComponent(match.stream_url)}`;
+                    } else {
+                        alert('المباراة لم تبدأ بعد. يرجى الانتظار حتى موعد المباراة.');
+                    }
+                });
+                matchList.appendChild(div);
+            });
+        }
+
+        async function initializePage() {
+            const loadingElement = document.getElementById('loading');
+            const featuredMatchSection = document.getElementById('featured-match');
+            const upcomingMatchesSection = document.getElementById('upcoming-matches');
+
+            try {
+                const matches = await fetchMatches();
+                if (matches.length > 0) {
+                    updateFeaturedMatch(matches[0]);
+                    updateUpcomingMatches(matches.slice(1));
+                    
+                    loadingElement.classList.add('hidden');
+                    featuredMatchSection.classList.remove('hidden');
+                    upcomingMatchesSection.classList.remove('hidden');
+                } else {
+                    throw new Error('No matches available');
+                }
+            } catch (error) {
+                console.error('Error initializing page:', error);
+                loadingElement.innerHTML = `
+                    <div class="text-center">
+                        <i class="fas fa-exclamation-triangle text-yellow-500 text-5xl mb-4"></i>
+                        <p class="text-xl text-red-500">عذرًا، حدث خطأ أثناء تحميل البيانات. جاري عرض بيانات بديلة.</p>
+                    </div>
+                `;
+                
+                // استخدام البيانات الاحتياطية في حالة الخطأ
+                updateFeaturedMatch(fallbackMatches[0]);
+                updateUpcomingMatches(fallbackMatches.slice(1));
+                
+                setTimeout(() => {
+                    loadingElement.classList.add('hidden');
+                    featuredMatchSection.classList.remove('hidden');
+                    upcomingMatchesSection.classList.remove('hidden');
+                }, 3000);
+            }
+        }
+
+        initializePage();
+    </script>
+</body>
+</html>
